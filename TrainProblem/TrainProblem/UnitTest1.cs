@@ -13,6 +13,8 @@ namespace TrainProblem
         }
         public int BirdDistance(int distance)
         {
+            
+
             return 0;
         }
     }
