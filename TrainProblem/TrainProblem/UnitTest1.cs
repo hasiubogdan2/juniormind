@@ -9,13 +9,15 @@ namespace TrainProblem
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(0, BirdDistance(100));
+            Assert.AreEqual(5, BirdDistance(10,0));
         }
-        public int BirdDistance(int distance)
+        public int BirdDistance(int distance, int answer)
         {
+            answer = 0;
+            answer = distance / 2;
             
 
-            return 0;
+            return answer;
         }
     }
 }
