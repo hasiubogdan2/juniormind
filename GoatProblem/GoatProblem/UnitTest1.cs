@@ -10,19 +10,16 @@ namespace GoatProblem
         public void TestMethod1()
         {
 
-            Assert.AreEqual(5, KGgoatsEat(1,1,1,5,5);
-                }
-              
-   public double KGgoatsEat( double Xdays, int Ygoats, double zKG, int Qgoats, double Wdays))
-        {   
-           double  Xdays=0; int Ygoats; double zKG; int Qgoats; double Wdays; double tKG;
+            Assert.AreEqual(5, KGgoatsEat(1, 1, 1, 5, 5));
+        }
 
-           
-            
+        public double KGgoatsEat(double Xdays, int Ygoats, double zKG, int Qgoats, double Wdays)
+        {
+            double kgOfFay = 0;
 
-        
+            kgOfFay = (Xdays * Qgoats * zKG) / (Wdays * Ygoats);
 
-
+            return kgOfFay;
         }
     }
 }
