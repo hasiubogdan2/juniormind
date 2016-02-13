@@ -13,9 +13,11 @@ namespace MushroomsProblem
         }
         public int howManyRedMushroomsare(int redMushrooms, int whiteMushrooms)
         {
+            int x = 10;
 
+            redMushrooms = whiteMushrooms * x;
 
-            return 100;
+            return redMushrooms;
         }
 
 
