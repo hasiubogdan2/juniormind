@@ -14,9 +14,15 @@ namespace PavementProblem
         }
         public double getStonePieces( double heightOfTheMarket, double widthOfTheMarket, double heightOfTheCubicStone)
         {
+            double ariaOfTheMarket = 0;  double   ariaOfTheCubic = 0; double cubicStonesnedeed;
+
+            ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
+            ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
+
+            cubicStonesnedeed = ariaOfTheMarket / ariaOfTheCubic;
 
 
-            return 4;
+            return cubicStonesnedeed;
         }
 
     }
