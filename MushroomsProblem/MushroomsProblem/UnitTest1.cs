@@ -16,11 +16,11 @@ namespace MushroomsProblem
         {
             int redMushrooms = 0; int whiteMushrooms = 0;
 
-            redMushrooms = xCoef * whiteMushrooms;
-            totalNumberOfMushrooms = redMushrooms + whiteMushrooms;
-            totalNumberOfMushrooms = whiteMushrooms + xCoef * whiteMushrooms;
-            totalNumberOfMushrooms = whiteMushrooms*(xCoef + 1);
             whiteMushrooms = totalNumberOfMushrooms / (xCoef + 1);
+
+
+            redMushrooms = totalNumberOfMushrooms - whiteMushrooms;
+
 
             return redMushrooms;
         }
