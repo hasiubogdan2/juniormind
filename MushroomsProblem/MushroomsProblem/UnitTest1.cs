@@ -8,7 +8,14 @@ namespace MushroomsProblem
     {
         [TestMethod]
         public void TestMethod1()
-        { Assert.AreEqual( 100 , howManyRedMushroomsare(10,110));
+        {
+            Assert.AreEqual( 100 , howManyRedMushroomsare(10,110));
+
+        }
+        [TestMethod]
+        public void MyTestMethod()
+        {
+            Assert.AreEqual(167, howManyRedMushroomsare(5, 200));
 
         }
         public int howManyRedMushroomsare( int xCoef, int totalNumberOfMushrooms)
@@ -18,9 +25,7 @@ namespace MushroomsProblem
 
             whiteMushrooms = totalNumberOfMushrooms / (xCoef + 1);
 
-
             redMushrooms = totalNumberOfMushrooms - whiteMushrooms;
-
 
             return redMushrooms;
         }
