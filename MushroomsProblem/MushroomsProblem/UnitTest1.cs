@@ -8,14 +8,15 @@ namespace MushroomsProblem
     {
         [TestMethod]
         public void TestMethod1()
-        { Assert.AreEqual( 100 , howManyRedMushroomsare(100,10));
+        { Assert.AreEqual( 100 , howManyRedMushroomsare(100,10,110));
 
         }
-        public int howManyRedMushroomsare(int redMushrooms, int whiteMushrooms)
-        {
-            int x = 10;
+        public int howManyRedMushroomsare(int redMushrooms, int whiteMushrooms, int totalNumberOfMushrooms)
 
-            redMushrooms = whiteMushrooms * x;
+        {
+            totalNumberOfMushrooms = redMushrooms + whiteMushrooms;
+            whiteMushrooms = 10; totalNumberOfMushrooms = 110;
+             redMushrooms = totalNumberOfMushrooms-whiteMushrooms;
 
             return redMushrooms;
         }
