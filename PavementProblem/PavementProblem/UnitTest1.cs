@@ -19,7 +19,8 @@ namespace PavementProblem
             ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
             ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
 
-            cubicStonesnedeed = ariaOfTheMarket / ariaOfTheCubic;
+            cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+0.5) * ((widthOfTheMarket/heightOfTheCubicStone)+0.5);
+            
 
 
             return cubicStonesnedeed;
