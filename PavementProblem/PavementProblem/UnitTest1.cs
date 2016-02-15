@@ -12,14 +12,14 @@ namespace PavementProblem
             Assert.AreEqual(4,getStonePieces(6,6,4));
 
         }
-        public double getStonePieces( double heightOfTheMarket, double widthOfTheMarket, double heightOfTheCubicStone)
+        public double getStonePieces( int heightOfTheMarket, int widthOfTheMarket, int heightOfTheCubicStone)
         {
-            double ariaOfTheMarket = 0;  double   ariaOfTheCubic = 0; double cubicStonesnedeed;
+            int ariaOfTheMarket = 0;  int   ariaOfTheCubic = 0; int cubicStonesnedeed;
 
             ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
             ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
 
-            cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+0.5) * ((widthOfTheMarket/heightOfTheCubicStone)+0.5);
+            cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+1) * ((widthOfTheMarket/heightOfTheCubicStone)+1);
             
 
 
