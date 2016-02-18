@@ -21,11 +21,10 @@ namespace MushroomsProblem
         public int howManyRedMushroomsare( int xCoef, int totalNumberOfMushrooms)
 
         {
-            int redMushrooms = 0; int whiteMushrooms = 0;
+            
+           int whiteMushrooms = totalNumberOfMushrooms / (xCoef + 1);
 
-            whiteMushrooms = totalNumberOfMushrooms / (xCoef + 1);
-
-            redMushrooms = totalNumberOfMushrooms - whiteMushrooms;
+           int redMushrooms = totalNumberOfMushrooms - whiteMushrooms;
 
             return redMushrooms;
         }
