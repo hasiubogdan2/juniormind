@@ -10,19 +10,20 @@ namespace PavementProblem
         public void TestMethod1()
         {
             Assert.AreEqual(4,getStonePieces(6,6,4));
-
+        }
+        [TestMethod]
+        public void PavementSecondTest()
+        {
+            Assert.AreEqual(4, getStonePieces(4,4,2));
         }
         public double getStonePieces( int heightOfTheMarket, int widthOfTheMarket, int heightOfTheCubicStone)
         {
-            int ariaOfTheMarket = 0;  int   ariaOfTheCubic = 0; int cubicStonesnedeed;
 
-            ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
-            ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
+            double ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
+            double  ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
 
-            cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+1) * ((widthOfTheMarket/heightOfTheCubicStone)+1);
+            int cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+1) * ((widthOfTheMarket/heightOfTheCubicStone)+1);
             
-
-
             return cubicStonesnedeed;
         }
 
