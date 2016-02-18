@@ -19,10 +19,9 @@ namespace PavementProblem
         public double getStonePieces( int heightOfTheMarket, int widthOfTheMarket, int heightOfTheCubicStone)
         {
 
-            double ariaOfTheMarket = heightOfTheMarket * widthOfTheMarket;
-            double  ariaOfTheCubic = heightOfTheCubicStone * heightOfTheCubicStone;
-
-            int cubicStonesnedeed = ((heightOfTheMarket/heightOfTheCubicStone)+1) * ((widthOfTheMarket/heightOfTheCubicStone)+1);
+            double lengthRatio =(double)heightOfTheMarket / heightOfTheCubicStone;
+            double widthRatio = (double)widthOfTheMarket / heightOfTheCubicStone;
+            int cubicStonesnedeed =(int)(Math.Ceiling(lengthRatio) * (Math.Ceiling(widthRatio)));
             
             return cubicStonesnedeed;
         }
