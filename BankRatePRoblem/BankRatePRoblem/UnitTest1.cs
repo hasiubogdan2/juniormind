@@ -7,18 +7,17 @@ namespace BankRatePRoblem
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void rateForFirstMonth()
         {
-            Assert.AreEqual(0, bankRatePayedIntheFourthYear3Month(8.000,4.7,4));
+            decimal rate = bankRatePayedIntheFourthYear3Month(100, 1, 12, 1);
+            Assert.AreEqual(101, rate);
         }
 
-        public double bankRatePayedIntheFourthYear3Month( double creditBank, double anualRate, double period)  {
+        public decimal bankRatePayedIntheFourthYear3Month( decimal creditBank, int period, decimal ratePerYear, int currentMonth)  {
 
-            double ratePayedIn4Year3Month = 0;
+            
 
-            ratePayedIn4Year3Month = creditBank * anualRate * period;
-
-            return ratePayedIn4Year3Month;
+            return creditBank/period + creditBank*ratePerYear/12/100;
             }
 
 
