@@ -15,13 +15,8 @@ namespace BankRatePRoblem
 
         public decimal bankRatePayedIntheFourthYear3Month( decimal creditBank, int period, decimal ratePerYear, int currentMonth)  {
 
-            
-
-            return creditBank/period + creditBank*ratePerYear/12/100;
-            }
-
-
-
-
-    }
+            decimal principal = creditBank / period;
+            decimal exacInterestPerMonth= ratePerYear / 12 / 100;
+            return principal + creditBank * exacInterestPerMonth;
+}
 }
