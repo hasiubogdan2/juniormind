@@ -7,15 +7,23 @@ namespace SportManProblem
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void firstLap()
         { Assert.AreEqual(1,howManyLapsDoesTheSportman(1,1));
+
 }
+        [TestMethod]
+        public void secondLap()
+        {
+            Assert.AreEqual(2, howManyLapsDoesTheSportman(2, 2));
+        }
+        
+
         public int howManyLapsDoesTheSportman(int laps,int rounds)
         {
 
             laps = rounds;
 
-            int result = laps * rounds;
+            int result = laps * (rounds-1);
 
 
             return result;
