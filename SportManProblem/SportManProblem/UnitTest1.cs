@@ -8,22 +8,22 @@ namespace SportManProblem
     {
         [TestMethod]
         public void firstLap()
-        { Assert.AreEqual(1,howManyLapsDoesTheSportman(1,1));
+        { Assert.AreEqual(1,howManyLapsDoesTheSportman(1));
 
 }
         [TestMethod]
         public void secondLap()
         {
-            Assert.AreEqual(4, howManyLapsDoesTheSportman(2, 2));
+            Assert.AreEqual(4, howManyLapsDoesTheSportman(2));
         }
         
 
-        public int howManyLapsDoesTheSportman(int laps,int rounds)
+        public int howManyLapsDoesTheSportman(int rounds)
         {
 
-            laps = rounds;
+           int result = rounds*rounds;
 
-            int result = laps * rounds;
+            
 
 
             return result;
