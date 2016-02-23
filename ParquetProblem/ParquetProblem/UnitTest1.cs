@@ -17,9 +17,9 @@ namespace ParquetProblem
         {
             double AreaRoom = nLengthOfTheRoom * mWidthOfTheRoom;
             double AreaParquet = aLengthOfTheParquet * bWidthOfTheParquet;
-            double CalculateParquetPieces = AreaParquet / AreaRoom;
-            double theLoss = CalculateParquetPieces * 15 / 100;
-            double calculateParquet = CalculateParquetPieces - theLoss;
+            double CalculateParquetPieces = AreaRoom / AreaParquet;
+            
+            double calculateParquet = CalculateParquetPieces - CalculateParquetPieces*15/100;
             return calculateParquet ;
 
         }
