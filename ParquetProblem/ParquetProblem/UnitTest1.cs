@@ -9,7 +9,7 @@ namespace ParquetProblem
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(3,CalculateParquet(3,2,2,1));
+            Assert.AreEqual(2.55,CalculateParquet(3,2,2,1));
 
         }
 
@@ -17,10 +17,10 @@ namespace ParquetProblem
         {
             double AreaRoom = nLengthOfTheRoom * mWidthOfTheRoom;
             double AreaParquet = aLengthOfTheParquet * bWidthOfTheParquet;
-            double calculateParquet = AreaRoom / AreaParquet;
-
-
-            return 3;
+            double CalculateParquetPieces = AreaParquet / AreaRoom;
+            double theLoss = CalculateParquetPieces * 15 / 100;
+            double calculateParquet = CalculateParquetPieces - theLoss;
+            return calculateParquet ;
 
         }
             
