@@ -14,7 +14,7 @@ namespace SportManProblem
         [TestMethod]
         public void secondLap()
         {
-            Assert.AreEqual(2, howManyLapsDoesTheSportman(2, 2));
+            Assert.AreEqual(4, howManyLapsDoesTheSportman(2, 2));
         }
         
 
@@ -23,7 +23,7 @@ namespace SportManProblem
 
             laps = rounds;
 
-            int result = laps * (rounds-1);
+            int result = laps * rounds;
 
 
             return result;
