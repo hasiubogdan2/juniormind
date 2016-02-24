@@ -9,11 +9,13 @@ namespace FarmerLand
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(0,CalculateTheLand(100,100));
+            Assert.AreEqual(0,CalculateTheLand(770000, 230));
         }
 
-        public double CalculateTheLand(double lengthOfTheLand,double areaOfTheNewLand)
+        public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
+
+
             return 0;
         }
 
