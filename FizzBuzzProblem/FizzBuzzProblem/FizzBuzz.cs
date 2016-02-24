@@ -27,11 +27,7 @@ namespace FizzBuzzProblem
 
         public string CalculateFizzBuzz(int multiplier)
         {
-            if ((multiplier % 3 == 0) || (multiplier % 5 == 0) || ((multiplier % 3 == 0) && multiplier % 5 == 0)))
-            {
-                return "Fizz";
-
-            }
+            string problemString = "";
 
         }
     }
