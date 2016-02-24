@@ -18,7 +18,11 @@ namespace WatermelonProblem
             Assert.AreEqual(false, CalculateIfTheWatermelonIsShared(21));
         }
 
-
+        [TestMethod]
+        public void Test3()
+        {
+            Assert.AreEqual(true, CalculateIfTheWatermelonIsShared(22));
+        }
         Boolean CalculateIfTheWatermelonIsShared(int watermelonKgs)
         {
             if ((watermelonKgs > 3)&&(watermelonKgs%2==0))
