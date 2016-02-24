@@ -16,7 +16,7 @@ namespace FarmerLand
         {
 
             double initialLength;
-            double result = areaOfTheNewLand / (initialLength + extraWidth) * extraWidth));
+            double result = areaOfTheNewLand / ((initialLength + extraWidth) * extraWidth);
 
 
             return initialLength * initialLength;
