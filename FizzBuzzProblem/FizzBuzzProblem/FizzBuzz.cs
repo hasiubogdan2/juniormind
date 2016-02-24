@@ -18,6 +18,13 @@ namespace FizzBuzzProblem
             Assert.AreEqual("Buzz", CalculateFizzBuzz(5));
         }
 
+        [TestMethod]
+        public void FizzBuzzTest()
+        {
+            Assert.AreEqual("FizzBuzz", CalculateFizzBuzz(15));
+        
+        }
+
         public string CalculateFizzBuzz(int multiplier)
         {
             if ((multiplier % 3 == 0) || (multiplier % 5 == 0) || ((multiplier % 3 == 0) && multiplier % 5 == 0)))
