@@ -16,13 +16,22 @@ namespace FizzBuzzProblem
         {
             Assert.AreEqual("Buzz", CalculateFizzBuzz(10));
         }
-
+        [TestMethod]
+        public void FizzBuzzTest()
+        {
+            Assert.AreEqual("FizzBuzz", CalculateFizzBuzz(30));
+        }
 
         public string CalculateFizzBuzz(int multiplier)
         {
             string problemString = "";
+
             if (multiplier % 3 == 0)  problemString= "Fizz";
+
             if (multiplier % 5 == 0)  problemString= "Buzz";
+
+            if ((multiplier%3==0)&&(multiplier%5==0)) problemString = "FizzBuzz";
+
             return problemString;
         }
 
