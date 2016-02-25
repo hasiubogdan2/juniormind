@@ -7,32 +7,31 @@ namespace WatermelonProblem
     public class UnitTest1
     {
         [TestMethod]
-        public void Test1()
+        public void CalculateWithEvenNumberOfKgs()
         {
-            Assert.AreEqual(true, CalculateIfTheWatermelonIsShared(20));
+            Assert.AreEqual("YES", CalculateIfTheWatermelonIsShared(20));
 
         }
         [TestMethod]
-        public void Test2()
+        public void CalculateWithNotEvenNumbersOfKgs()
         {
-            Assert.AreEqual(false, CalculateIfTheWatermelonIsShared(21));
+            Assert.AreEqual("NO", CalculateIfTheWatermelonIsShared(21));
         }
 
         [TestMethod]
         public void Test3()
         {
-            Assert.AreEqual(true, CalculateIfTheWatermelonIsShared(22));
+            Assert.AreEqual("YES", CalculateIfTheWatermelonIsShared(22));
         }
-        Boolean CalculateIfTheWatermelonIsShared(int watermelonKgs)
+       public string CalculateIfTheWatermelonIsShared(int watermelonKgs)
         {
-            if ((watermelonKgs > 3)&&(watermelonKgs%2==0))
-            {
-                return true;
+            string verifyTheConditions = "";
 
-            }    else return false;
+            if ((watermelonKgs > 3) && (watermelonKgs % 2 == 0)) return "YES";
 
-            
-          
-        }
+
+            return verifyTheConditions;
+
+          }
     }
 }
