@@ -17,8 +17,15 @@ namespace FizzBuzzProblem
         public string CalculateFizzBuzz(int multiplier)
         {
             string problemString = "";
-            return "Fizz";
-        }
+            if (multiplier % 3 == 0)
+            {
+                return "Fizz";
+            }
+            else
+                return "THis is not a Fizz";
+
+            
+        } 
     }
 }
 
