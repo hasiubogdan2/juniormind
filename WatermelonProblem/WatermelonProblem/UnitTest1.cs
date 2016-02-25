@@ -18,18 +18,20 @@ namespace WatermelonProblem
             Assert.AreEqual("NO", CalculateIfTheWatermelonIsShared(21));
         }
 
+        
         [TestMethod]
-        public void Test3()
+        public void CalculateIfTheWatermelonsKgsAreFew()
         {
-            Assert.AreEqual("YES", CalculateIfTheWatermelonIsShared(22));
+            Assert.AreEqual("NO", CalculateIfTheWatermelonIsShared(2));
         }
+
        public string CalculateIfTheWatermelonIsShared(int watermelonKgs)
         {
             string verifyTheConditions = "";
 
             if ((watermelonKgs > 3) && (watermelonKgs % 2 == 0)) return "YES";
             if ((watermelonKgs > 3) && (watermelonKgs % 2 == 1)) return "NO";
-
+            if ((watermelonKgs < 3) && (watermelonKgs % 2 == 0)) return "NO";
             return verifyTheConditions;
 
           }
