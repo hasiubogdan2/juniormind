@@ -21,13 +21,13 @@ namespace FizzBuzzProblem
         public string CalculateFizzBuzz(int multiplier)
         {
             string problemString = "";
-            if (multiplier % 3 == 0) return "Fizz";
-            if (multiplier % 5 == 0) return "Buzz";
+            if (multiplier % 3 == 0)  problemString= "Fizz";
+            if (multiplier % 5 == 0)  problemString= "Buzz";
             return problemString;
         }
 
             
         } 
     }
-}
+
 
