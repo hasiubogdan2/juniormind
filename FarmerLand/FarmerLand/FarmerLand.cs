@@ -15,11 +15,7 @@ namespace FarmerLand
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
 
-            double initialLength;
-            double result = areaOfTheNewLand / ((initialLength + extraWidth) * extraWidth);
-
-
-            return initialLength * initialLength;
+            return 0;
         }
 
     }
