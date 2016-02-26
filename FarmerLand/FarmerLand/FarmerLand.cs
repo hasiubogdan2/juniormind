@@ -11,6 +11,11 @@ namespace FarmerLand
         {
             Assert.AreEqual(4,CalculateTheLand(10, 3));
         }
+        [TestMethod]
+        public void CalculateProblemDates()
+        {
+            Assert.AreEqual(592900, CalculateTheLand(770000, 230));
+        }
 
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
