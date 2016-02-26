@@ -20,7 +20,7 @@ namespace FarmerLand
 
             if (multiplier > 0)
             {
-                initialLength = (-extraWidth + Math.Sqrt(areaOfTheNewLand)) / 2;
+                initialLength = (-extraWidth + Math.Sqrt(multiplier)) / 2;
 
                 return initialLength;
             } else return 0;
