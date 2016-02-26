@@ -29,10 +29,10 @@ namespace WatermelonProblem
         {
             string verifyTheConditions = "";
 
-            if ((watermelonKgs > 3) && (watermelonKgs % 2 == 0)) return "YES";
-            if ((watermelonKgs > 3) && (watermelonKgs % 2 == 1)) return "NO";
-            if ((watermelonKgs < 3) && (watermelonKgs % 2 == 0)) return "NO";
-            return verifyTheConditions;
+            if ((watermelonKgs >= 4) && (watermelonKgs % 2 == 0)) return "YES";
+
+            else return "NO";
+           
 
           }
     }
