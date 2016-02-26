@@ -14,11 +14,17 @@ namespace FarmerLand
 
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
+            double initialLength=0;
 
+            double multiplier = extraWidth * extraWidth + 3 * areaOfTheNewLand;
 
-            extraWidth =Math.Sqrt(areaOfTheNewLand-extraWidth*3);
-           
-            return extraWidth;
+            if (multiplier > 0)
+            {
+                initialLength = Math.Sqrt(areaOfTheNewLand - extraWidth * initialLength);
+
+                return initialLength;
+            } else return 0;
+            
         }
 
     }
