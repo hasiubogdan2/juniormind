@@ -9,7 +9,7 @@ namespace FarmerLand
         [TestMethod]
         public void CalculateAtSmallerScale()
         {
-            Assert.AreEqual(2,CalculateTheLand(10, 3));
+            Assert.AreEqual(4,CalculateTheLand(10, 3));
         }
 
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
@@ -22,7 +22,7 @@ namespace FarmerLand
             {
                 initialLength = (-extraWidth + Math.Sqrt(multiplier)) / 2;
 
-                return initialLength;
+                return initialLength*initialLength;
             } else return 0;
             
         }
