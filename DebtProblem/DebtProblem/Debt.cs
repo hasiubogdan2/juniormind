@@ -4,11 +4,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DebtProblem
 {
     [TestClass]
-    public class UnitTest1
+    public class Debt
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CalculateFirstPenalty()
         {
+            Assert.AreEqual(0,CalculateTotalSumOfRent(100,5));
+        }
+
+        public decimal CalculateTotalSumOfRent(decimal rent,int extraDays)
+        {
+
+            return 0;
         }
     }
 }
