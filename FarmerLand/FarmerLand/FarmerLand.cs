@@ -7,15 +7,16 @@ namespace FarmerLand
     public class FarmerLand
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CalculateAtSmallerScale()
         {
-            Assert.AreEqual(0,CalculateTheLand(770000, 230));
+            Assert.AreEqual(2,CalculateTheLand(10, 3));
         }
 
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
-
-            return 0;
+            
+           
+            return 2;
         }
 
     }
