@@ -14,12 +14,12 @@ namespace FizzBuzzProblem
         [TestMethod]
         public void Buzztest()
         {
-            Assert.AreEqual("Buzz", CalculateFizzBuzz(10));
+            Assert.AreEqual("Buzz", CalculateFizzBuzz(5));
         }
         [TestMethod]
         public void FizzBuzzTest()
         {
-            Assert.AreEqual("FizzBuzz", CalculateFizzBuzz(30));
+            Assert.AreEqual("FizzBuzz", CalculateFizzBuzz(15));
         }
 
         public string CalculateFizzBuzz(int multiplier)
