@@ -14,9 +14,11 @@ namespace FarmerLand
 
         public double CalculateTheLand(double areaOfTheNewLand, double extraWidth)
         {
-            
+
+
+            extraWidth =Math.Sqrt(areaOfTheNewLand-extraWidth*3);
            
-            return 2;
+            return extraWidth;
         }
 
     }
