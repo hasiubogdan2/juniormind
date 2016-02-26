@@ -9,21 +9,21 @@ namespace DebtProblem
         [TestMethod]
         public void CalculateFirstDaysPenalty()
         {
-            Assert.AreEqual(100.4,CalculateTotalSumOfRent(100,5));
+            Assert.AreEqual(102,CalculateTotalSumOfRent(100,5));
         }
         [TestMethod]
         public void CalculateSecondIntervalDaysPenalty()
         {
-            Assert.AreEqual(100.25, CalculateTotalSumOfRent(100, 20));
+            Assert.AreEqual(105, CalculateTotalSumOfRent(100, 20));
         }
 
         public double CalculateTotalSumOfRent(int rent,int extraDays)
         {
             
-            double rentPerDay = rent / extraDays;
+            
 
-            double penalty1 = 0.02 * rentPerDay;
-            double penalty2 = 0.05 * rentPerDay;
+            double penalty1 = 0.02 * rent;
+            double penalty2 = 0.05 * rent;
             
             double totalSumOfRent =  rent + penalty1;
             double totalSumOfRent2 = rent + penalty2;
