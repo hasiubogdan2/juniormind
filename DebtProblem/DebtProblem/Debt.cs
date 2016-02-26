@@ -7,7 +7,7 @@ namespace DebtProblem
     public class Debt
     {
         [TestMethod]
-        public void CalculateFirstPenalty()
+        public void CalculateFirstDaysPenalty()
         {
             Assert.AreEqual(100.4,CalculateTotalSumOfRent(100,5));
         }
@@ -16,8 +16,8 @@ namespace DebtProblem
         {
             
             double rentPerDay = rent / extraDays;
-            double penalty = (2 / 100) * rentPerDay;
-            double totalSumOfRent = rent + penalty;
+            double penalty = 0.02 * rentPerDay;
+            double totalSumOfRent =  rent + penalty;
             if ((extraDays >= 1) && (extraDays <= 10)) return totalSumOfRent;
 
              else return 0;   
