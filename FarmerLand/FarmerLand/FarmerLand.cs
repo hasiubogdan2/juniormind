@@ -28,7 +28,7 @@ namespace FarmerLand
                 initialLength = (-extraWidth + Math.Sqrt(multiplier)) / 2;
 
                 return initialLength*initialLength;
-            } else return 0;
+            } return 0;
             
         }
 
