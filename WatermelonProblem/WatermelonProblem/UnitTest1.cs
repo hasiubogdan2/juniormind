@@ -29,7 +29,7 @@ namespace WatermelonProblem
         {
             string verifyTheConditions = "";
 
-            if ((watermelonKgs >= 4) && (watermelonKgs % 2 == 0)) return "YES";
+            if ((watermelonKgs > 2) && (watermelonKgs % 2 == 0)) return "YES";
 
             else return "NO";
            
