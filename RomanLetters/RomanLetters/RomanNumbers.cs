@@ -7,7 +7,7 @@ namespace RomanLetters
     public class RomanNumbers
     {
         [TestMethod]
-        public void RevealFirst10Numbers()
+        public void RevealNumber5Test()
         {
             Assert.AreEqual("V",FindTheRomanNumbers(5));
         }
@@ -22,7 +22,11 @@ namespace RomanLetters
         {
             Assert.AreEqual("IX", FindTheRomanNumbers(9));
         }
-
+        [TestMethod]
+        public void RevealNumber11Test()
+        {
+            Assert.AreEqual("XI", FindTheRomanNumbers(11));
+        }
         public string FindTheRomanNumbers(int number)
         {
             string theNumberIs = "";
@@ -36,6 +40,8 @@ namespace RomanLetters
             if (number == 8) return  "VIII";
             if (number == 9) return  "IX";
             if (number == 10) return  "X";
+            if (number == 11) return "X" + "I";
+
 
             return "not good";
 
