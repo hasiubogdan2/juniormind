@@ -16,12 +16,20 @@ namespace RomanLetters
         public string FindTheRomanNumbers(int number)
         {
 
-            string result = "";
-            string[] romanNumbers = { "I","IV","V","IX","X" };
-            int[] numbers = { 1, 4, 5, 9, 10 };
+            string result = string.Empty;
+            string[] romanNumbers = { "I", "IV", "V", "IX", "X", "XL", "L", "XC", "C" };
+            int[] numbers = { 1, 4, 5, 9, 10, 40, 50, 90, 100 };
 
-           for(int i = numbers.Length; i <= 11; i++)
-                while()
+           for(int i = numbers.Length-1; i <=100; i--)
+            {
+                while(number-numbers[i]>=0)
+                {
+                    result = number + romanNumbers[i];
+                    number = number - numbers[i];
+                }
+
+            }return result;
+                
 
 
 
