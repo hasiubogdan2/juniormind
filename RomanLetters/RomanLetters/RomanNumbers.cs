@@ -43,7 +43,7 @@ namespace RomanLetters
                     while (number - numbers[i] >= 0)
                     {
 
-                        number =number-numbers[i];
+                       
                         result = result+romanNumbers[i];
                     }
                 }      return result;       
