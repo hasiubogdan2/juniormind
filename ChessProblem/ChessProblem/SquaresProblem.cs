@@ -13,8 +13,11 @@ namespace ChessProblem
         }
         public int CalculateNumberOfSquares(int squares)
         {
-            int result = squares * squares+1;
-
+            int result = 0;
+            while(squares>0)
+            {
+                result = +squares * squares;
+            }
             return result;
 
         }
