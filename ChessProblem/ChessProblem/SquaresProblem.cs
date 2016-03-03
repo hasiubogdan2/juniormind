@@ -24,7 +24,12 @@ namespace ChessProblem
         [TestMethod]
         public void CalculateChessTable5x5()
         {
-            Assert.AreEqual(155, CalculateNumberOfSquares(5));
+            Assert.AreEqual(55, CalculateNumberOfSquares(5));
+        }
+        [TestMethod]
+        public void CalculateChessTable8x8()
+        {
+            Assert.AreEqual(204, CalculateNumberOfSquares(8));
         }
         public int CalculateNumberOfSquares(int squares)
         {
