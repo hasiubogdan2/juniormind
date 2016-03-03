@@ -30,7 +30,7 @@ namespace RomanLetters
         [TestMethod]
         public void RevealNUmber5Test()
         {
-            Assert.AreEqual("V", FindTheRomanNumbers(5));
+            Assert.AreEqual("C", FindTheRomanNumbers(100));
         }
         public string FindTheRomanNumbers(int number)
         {
