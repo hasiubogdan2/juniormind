@@ -21,8 +21,12 @@ namespace RomanLetters
         {
             Assert.AreEqual("XXXV", FindTheRomanNumbers(35));
         }
-       
-       
+
+        [TestMethod]
+        public void RevealNUmber9Test()
+        {
+            Assert.AreEqual("IX", FindTheRomanNumbers(9));
+        }
 
         public string FindTheRomanNumbers(int number)
         {
