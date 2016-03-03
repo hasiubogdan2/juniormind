@@ -16,7 +16,8 @@ namespace ChessProblem
             int result = 0;
             while(squares>0)
             {
-                result = +squares * squares;
+                result = result+(squares * squares);
+                squares--;
             }
             return result;
 
