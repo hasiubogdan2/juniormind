@@ -16,6 +16,11 @@ namespace ChessProblem
         {
             Assert.AreEqual(14, CalculateNumberOfSquares(3));
         }
+        [TestMethod]
+        public void CalculateChessTable4X4()
+        {
+            Assert.AreEqual(30, CalculateNumberOfSquares(4));
+        }
         public int CalculateNumberOfSquares(int squares)
         {
             int result = 0;
