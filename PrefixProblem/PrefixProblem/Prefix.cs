@@ -9,7 +9,7 @@ namespace PrefixProblem
         [TestMethod]
         public void FindCommonPrefix()
         {
-            Assert.AreEqual("aaa", CalculatePrefix("aaa", "aaa"));
+            Assert.AreEqual("aaa", CalculatePrefix("aaabba", "aaaaaabb"));
         }
 
         public string CalculatePrefix(string firstWord, string secondWord)
@@ -17,10 +17,13 @@ namespace PrefixProblem
 
             string commonPrefix = string.Empty;
 
-            for (int i = 1; i < firstWord.Length && i < secondWord.Length && firstWord[i] == secondWord[i]; i++)
+            for (int i = 0; i < firstWord.Length && i < secondWord.Length; i++)
             {
+                if (firstWord[i] != secondWord[i]) break;
 
-                commonPrefix += firstWord[i];
+                else 
+                    commonPrefix += firstWord[i]; 
+
             }
 
             return commonPrefix;
