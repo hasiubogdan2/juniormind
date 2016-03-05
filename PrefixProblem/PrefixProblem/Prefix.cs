@@ -11,7 +11,16 @@ namespace PrefixProblem
         {
             Assert.AreEqual("aaa", CalculatePrefix("aaabba", "aaaaaabb"));
         }
-
+        [TestMethod]
+        public void FindCommonPrefix2()
+        {
+            Assert.AreEqual("aba", CalculatePrefix("abaa", "abab"));
+        }
+        [TestMethod]
+        public void FindCommonPrefix3()
+        {
+            Assert.AreEqual("ab", CalculatePrefix("abbaaaaa", "abaaaaaa"));
+        }
         public string CalculatePrefix(string firstWord, string secondWord)
         {
 
