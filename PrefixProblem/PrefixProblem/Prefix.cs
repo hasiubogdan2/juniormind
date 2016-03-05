@@ -16,6 +16,11 @@ namespace PrefixProblem
         {
             Assert.AreEqual(6, CalculateFactorial(3));
         }
+        [TestMethod]
+        public void CalculateFactorialTest2()
+        {
+            Assert.AreEqual(120, CalculateFactorial(5));
+        }
         public string CalculatePrefix(string firstWord, string secondWord)
         {
             int factorial = 0;
