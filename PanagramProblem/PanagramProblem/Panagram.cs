@@ -9,7 +9,7 @@ namespace PanagramProblem
         [TestMethod]
         public void CalculateIfPanagram()
         {
-            Assert.AreEqual(true, FindPanagram("The quick brown fox jumps over the lazy dog"));
+            Assert.AreEqual(true, FindPanagram("ab"));
 
         }
 
@@ -23,6 +23,7 @@ namespace PanagramProblem
             for (int i = 0; i < alphabet.Length; i++)
             {
                 if ((char)('a') == panagram[i]) return true;
+                if ((char)('b') == panagram[i]) return true;
 
             } return false;
 
