@@ -9,9 +9,15 @@ namespace ExcelColumnsProblem
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.AreEqual("A", CalculateTheNumberOfColumn(1));
         }
 
-        CalculateColumn
+     public string  CalculateTheNumberOfColumn(int numberInserted)
+        {
+            
+            return "A";
+
+        }
 
     }
 }
