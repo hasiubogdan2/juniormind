@@ -9,16 +9,20 @@ namespace PanagramProblem
         [TestMethod]
         public void CalculateIfPanagram()
         {
-            Assert.AreEqual(false, CheckIfPanagram("b     c"));
+            Assert.AreEqual("No,its not a panagram", FindIfPanagram("b     c"));
 
         }
         [TestMethod]
         public void CalculateIfPanagramSentence()
         {
-            Assert.AreEqual(true, CheckIfPanagram("The quick brown fox jumps over the lazy dog"));
+            Assert.AreEqual("Yes,its a panagram", FindIfPanagram("The quick brown fox jumps over the lazy dog"));
 
         }
-
+        [TestMethod]
+        public void CalculateIfPanagramLetters()
+        {
+            Assert.AreEqual("Yes,its a panagram", FindIfPanagram("abcdefghijklmnopqrstuvwxyz"));
+        }
         public string FindIfPanagram(string sentence)
         {
             string lowerCaseTransform = sentence.ToLower();
