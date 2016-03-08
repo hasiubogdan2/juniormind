@@ -47,9 +47,8 @@ namespace ExcelProblem
         {
             int i = 0;
             string output = string.Empty;
-            string[] upperCaseAlphabet = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
-                "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z" };
-            for (i = 0; i < upperCaseAlphabet.Length; i++)
+           
+            for (i = 0; i < numberInserted; i++)
             {
                 if (numberInserted >= 0 && numberInserted < 26)
                     return ((char)('A' + numberInserted)).ToString();
