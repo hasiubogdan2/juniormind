@@ -24,7 +24,7 @@ namespace ExcelProblem
                 "P", "Q", "R", "S", "T", "U", "W", "X", "Y", "Z" };
             for (i = 0; i < upperCaseAlphabet.Length; i++)
             {
-                if (numberInserted > 26) return "Error";
+                if ((numberInserted > 26)||(numberInserted<=0)) return "Error";
             }
 
             return "A";
