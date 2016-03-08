@@ -11,12 +11,7 @@ namespace ExcelProblem
         {
             Assert.AreEqual("B", CalculateColumn(1));
         }
-        [TestMethod]
-        public void CalculateForError()
-        {
-            Assert.AreEqual("Error", CalculateColumn(30));
-        }
-
+        
         [TestMethod]
         public void CalculateForFirst26Columns()
         {
@@ -27,6 +22,13 @@ namespace ExcelProblem
         {
             Assert.AreEqual("X", CalculateColumn(23));
         }
+        [TestMethod]
+        public void CalculateForBiggerThan26()
+        {
+            Assert.AreEqual("AA", CalculateColumn(26));
+        }
+
+
         public string CalculateColumn(int numberInserted)
         {
             int i = 0;
@@ -37,9 +39,14 @@ namespace ExcelProblem
             {
                 if (numberInserted >= 0 && numberInserted < 26)
                     return ((char)('A' + numberInserted)).ToString();
+                else if (numberInserted > 25)
+                {
+                    return (numberInserted / 26) + (numberInserted % 26 + 1).ToString();
+               
+                }
             }
 
-            return "Error";
+                return "Error";
         }
     }
 
