@@ -25,9 +25,23 @@ namespace ExcelProblem
         [TestMethod]
         public void CalculateForBiggerThan26()
         {
-            Assert.AreEqual("AA", CalculateColumn(26));
+            Assert.AreEqual("Error", CalculateColumn(26));
         }
-
+        [TestMethod]
+        public void CalculateForNumber27()
+        {
+            Assert.AreEqual("AA", CalculateColumn(27));
+        }
+        [TestMethod]
+        public void CalculateForBigger2()
+        {
+            Assert.AreEqual("Z", CalculateColumn(25));
+        }
+        [TestMethod]
+        public void CAlculateForBigger()
+        {
+            Assert.AreEqual("BC", CalculateColumn(27));
+        }
 
         public string CalculateColumn(int numberInserted)
         {
@@ -39,9 +53,9 @@ namespace ExcelProblem
             {
                 if (numberInserted >= 0 && numberInserted < 26)
                     return ((char)('A' + numberInserted)).ToString();
-                else if (numberInserted > 25)
+                else if (numberInserted > 26)
                 {
-                    return (numberInserted / 26) + (numberInserted % 26 + 1).ToString();
+          return CalculateColumn(numberInserted / 26) + CalculateColumn(numberInserted % 26 + 1);
                
                 }
             }
