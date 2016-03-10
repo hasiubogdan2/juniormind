@@ -16,11 +16,15 @@ namespace CubeProblem
 
             int i = 1;
             int cube = i*i*i;
-
-            while((cube % 1000 == 888)&&(i<number))
+            int  multiplier= 0;
+            while((cube % 1000 != 888)&&(multiplier!=number))
             {
                 i++;
                 cube = i*i*i;
+                if ((cube % 1000 == 888))
+
+                    multiplier++;
+                    return i;
             }
 
             return i;
