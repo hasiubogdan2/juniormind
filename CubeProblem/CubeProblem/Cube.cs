@@ -13,10 +13,17 @@ namespace CubeProblem
         }
         public int CalculateCube192(int number)
         {
-            int k = 192;
+            
+            int i = 192;
+            int cube = i*i*i;
 
-            return k *= k * k;
+            if (cube % 1000 == 888)
+            {
+                i++;
+                cube = i*i*i;
+            }
 
-        }
+            return i;
+        } 
     }
 }
