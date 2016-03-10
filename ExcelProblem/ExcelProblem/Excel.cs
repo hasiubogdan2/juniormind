@@ -30,7 +30,7 @@ namespace ExcelProblem
         [TestMethod]
         public void CalculateForNumber27()
         {
-            Assert.AreEqual("AA", CalculateColumn(27));
+            Assert.AreEqual("BC", CalculateColumn(27));
         }
         [TestMethod]
         public void CalculateForBigger2()
@@ -47,12 +47,12 @@ namespace ExcelProblem
         {
             int i = 0;
             string output = string.Empty;
-           
+            
             for (i = 0; i < numberInserted; i++)
             {
                 if (numberInserted >= 0 && numberInserted < 26)
                     return ((char)('A' + numberInserted)).ToString();
-                else if (numberInserted > 26)
+                else if (numberInserted > 25)
                 {
           return CalculateColumn(numberInserted / 26) + CalculateColumn(numberInserted % 26 + 1);
                
