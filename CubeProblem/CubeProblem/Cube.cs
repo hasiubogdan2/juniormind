@@ -22,7 +22,7 @@ namespace CubeProblem
             int i = 1;
             int cube = 0;
             int  multiplier= 0;
-            while((cube % 1000 != 888)&&(multiplier!=number))
+            while((cube % 1000 != 888)||(multiplier!=number))
             {
                 i++;
                 cube = i*i*i;
