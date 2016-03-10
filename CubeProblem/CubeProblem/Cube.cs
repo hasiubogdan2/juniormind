@@ -24,10 +24,10 @@ namespace CubeProblem
                 if ((cube % 1000 == 888))
 
                     multiplier++;
-                    return i;
+                   
             }
-
             return i;
+
         } 
     }
 }
