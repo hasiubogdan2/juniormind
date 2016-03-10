@@ -7,15 +7,20 @@ namespace CubeProblem
     public class Cube
     {
         [TestMethod]
-        public void CalculateCube()
+        public void CalculateCube192()
         {
-            Assert.AreEqual(192, CalculateCube192(1));
+            Assert.AreEqual(192, CalculateCube(1));
         }
-        public int CalculateCube192(int number)
+        [TestMethod]
+        public void CalculateCube442()
+        {
+            Assert.AreEqual(442, CalculateCube(2));
+        }
+        public int CalculateCube(int number)
         {
 
             int i = 1;
-            int cube = i*i*i;
+            int cube = 0;
             int  multiplier= 0;
             while((cube % 1000 != 888)&&(multiplier!=number))
             {
