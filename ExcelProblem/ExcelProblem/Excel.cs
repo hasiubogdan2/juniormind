@@ -43,7 +43,11 @@ namespace ExcelProblem
         {
             Assert.AreEqual("AAA", CalculateColumn(703));
         }
-
+        [TestMethod]
+        public void Testfor3ColumnLetters()
+        {
+            Assert.AreEqual("AAB", CalculateColumn(704));
+        }
         public string CalculateColumn(int numberInserted)
         {
             int i = 0;
