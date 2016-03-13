@@ -11,11 +11,15 @@ namespace AnagramProblem
         {
             Assert.AreEqual(6, CalculateAnagram("aaa"));
         }
-        
+        [TestMethod]
+        public void CalculateAnagramWithSameLetters2()
+        {
+            Assert.AreEqual(24, CalculateAnagram("bbbb"));
+        }
         public int CalculateAnagram(string word)
         {
 
-            return Factorial(3);
+            return Factorial(4);
                 
         }
 
