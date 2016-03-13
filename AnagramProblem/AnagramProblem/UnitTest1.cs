@@ -18,8 +18,12 @@ namespace AnagramProblem
         }
         public int CalculateAnagram(string word)
         {
-
-            return Factorial(4);
+            int result = 1;
+            string LowerCase = word.ToLower();
+           for(int i=1; i <= word.Length; i++)
+            {
+                result = Factorial(i);
+            }return result;
                 
         }
 
