@@ -16,6 +16,11 @@ namespace CubeProblem
         {
             Assert.AreEqual(442, CalculateCube(2));
         }
+        [TestMethod]
+        public void CalculateCube692()
+        {
+            Assert.AreEqual(692, CalculateCube(3));
+        }
         public int CalculateCube(int number)
         {
 
