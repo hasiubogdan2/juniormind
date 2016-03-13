@@ -16,6 +16,11 @@ namespace AnagramProblem
         {
             Assert.AreEqual(24, CalculateAnagram("bbbb"));
         }
+        [TestMethod]
+        public void CalculateAnagramWithSameLettersUpper()
+        {
+            Assert.AreEqual(2, CalculateAnagram("AA"));
+        }
         public int CalculateAnagram(string word)
         {
             int result = 1;
