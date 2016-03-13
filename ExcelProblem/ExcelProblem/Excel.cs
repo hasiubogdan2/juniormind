@@ -38,6 +38,11 @@ namespace ExcelProblem
         {
             Assert.AreEqual("AB", CalculateColumn(28));
         }
+        [TestMethod]
+        public void TestFor3ColumnLetters()
+        {
+            Assert.AreEqual("AAA", CalculateColumn(703));
+        }
 
         public string CalculateColumn(int numberInserted)
         {
