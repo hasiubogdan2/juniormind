@@ -25,7 +25,7 @@ namespace AnagramProblem
         {
             int result = 1;
             string LowerCase = word.ToLower();
-           for(int i=1; i <= word.Length; i++)
+           for(int i='a'; i <= 'z'; i++)
             {
                 result = Factorial(i);
             }return result;
