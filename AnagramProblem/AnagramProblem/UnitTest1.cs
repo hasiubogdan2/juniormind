@@ -30,7 +30,7 @@ namespace AnagramProblem
         public int CalculateAnagram(string word)
         {
             int result = 1;
-            string LowerCase = word.ToLower();
+           
            for(int i='a'; i<='z'; i++)
             {
                 result =result* Factorial(GetRepetition((char)i, word)) ;
@@ -40,6 +40,7 @@ namespace AnagramProblem
         int GetRepetition(char letterIntroduced, string word)
         {
             int countWord = 0;
+            string LowerCase = word.ToLower();
             for (int i = 0; i < word.Length; i++)
             {
                 if (letterIntroduced == word[i])
