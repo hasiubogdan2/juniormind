@@ -33,7 +33,7 @@ namespace AnagramProblem
             string LowerCase = word.ToLower();
            for(int i='a'; i<='z'; i++)
             {
-                result = Factorial(GetRepetition((char)i, word)) ;
+                result =result* Factorial(GetRepetition((char)i, word)) ;
             }return result;
                 
         }
