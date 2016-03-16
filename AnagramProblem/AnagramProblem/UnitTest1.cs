@@ -9,17 +9,17 @@ namespace AnagramProblem
         [TestMethod]
         public void CalculateAnagramWithSameLetters()
         {
-            Assert.AreEqual(6, CalculateAnagram("aaa"));
+            Assert.AreEqual(1, CalculateAnagram("aaa"));
         }
         [TestMethod]
         public void CalculateAnagramWithSameLetters2()
         {
-            Assert.AreEqual(24, CalculateAnagram("bbbb"));
+            Assert.AreEqual(1, CalculateAnagram("bbbb"));
         }
         [TestMethod]
         public void CalculateAnagramWithSameLettersUpper()
         {
-            Assert.AreEqual(2, CalculateAnagram("AA"));
+            Assert.AreEqual(1, CalculateAnagram("AA"));
         }
         [TestMethod]
         public void CalculateDIstinct()
@@ -29,8 +29,9 @@ namespace AnagramProblem
         [TestMethod]
         public void CalculateAComplicatedAngram()
         {
-            Assert.AreEqual(1, CalculateAnagram("abc"));
+            Assert.AreEqual(6, CalculateAnagram("abc"));
         }
+       
         public int CalculateAnagram(string word)
         {
             int result = 1;
@@ -38,8 +39,8 @@ namespace AnagramProblem
            for(int i='a'; i<='z'; i++)
             {
                 result =result* Factorial(GetRepetition((char)i, word)) ;
-            }return result;
-                
+            }return (Factorial(word.Length)) / result;
+
         }
         int GetRepetition(char letterIntroduced, string word)
         {
