@@ -27,11 +27,20 @@ namespace AnagramProblem
             Assert.AreEqual(2, GetRepetition('a',"aab"));
         }
         [TestMethod]
+        public void CalculateRepetition()
+        {
+            Assert.AreEqual(4, GetRepetition('b', "abababab"));
+        }
+        [TestMethod]
         public void CalculateAComplicatedAngram()
         {
             Assert.AreEqual(6, CalculateAnagram("abc"));
         }
-       
+        [TestMethod]
+        public void CalculateAnagram()
+        {
+            Assert.AreEqual(12, CalculateAnagram("abcd"));
+        }
         public int CalculateAnagram(string word)
         {
             int result = 1;
