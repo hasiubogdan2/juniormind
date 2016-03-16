@@ -21,6 +21,13 @@ namespace AnagramProblem
         {
             Assert.AreEqual(2, CalculateAnagram("AA"));
         }
+        [TestMethod]
+        public void CalculateDIstinct()
+        {
+            Assert.AreEqual(2, GetRepetition('a',"aab"));
+        }
+        
+
         public int CalculateAnagram(string word)
         {
             int result = 1;
@@ -30,6 +37,16 @@ namespace AnagramProblem
                 result = Factorial(i);
             }return result;
                 
+        }
+        int GetRepetition(char letterIntroduced, string word)
+        {
+            int countWord = 0;
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (letterIntroduced == word[i])
+                    countWord++;
+            }
+            return countWord;
         }
 
         int Factorial(int number)
