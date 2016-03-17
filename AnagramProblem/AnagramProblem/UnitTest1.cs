@@ -49,11 +49,12 @@ namespace AnagramProblem
         public int CalculateAnagram(string word)
         {
             int result = 1;
-           
+            int anagrams = 0;
            for(int i='a'; i<='z'; i++)
             {
                 result =result* Factorial(GetRepetition((char)i, word)) ;
-            }return Factorial(word.Length) / result;
+            }
+            return anagrams= Factorial(word.Length) / result;
 
         }
         string GetDistinct(string word)
