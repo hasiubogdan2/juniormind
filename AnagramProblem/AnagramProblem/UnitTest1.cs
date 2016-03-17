@@ -22,7 +22,7 @@ namespace AnagramProblem
             Assert.AreEqual(1, CalculateAnagram("AA"));
         }
         [TestMethod]
-        public void CalculateDIstinct()
+        public void CalculateRepetitions()
         {
             Assert.AreEqual(2, GetRepetition('a',"aab"));
         }
@@ -39,7 +39,12 @@ namespace AnagramProblem
         [TestMethod]
         public void CalculateAnagram()
         {
-            Assert.AreEqual(12, CalculateAnagram("abcd"));
+            Assert.AreEqual(24, CalculateAnagram("abcd"));
+        }
+        [TestMethod]
+        public void FindDistinctChar()
+        {
+            Assert.AreEqual("abcdx", GetDistinct("abcdabcdaaccdbx"));
         }
         public int CalculateAnagram(string word)
         {
@@ -48,13 +53,26 @@ namespace AnagramProblem
            for(int i='a'; i<='z'; i++)
             {
                 result =result* Factorial(GetRepetition((char)i, word)) ;
-            }return (Factorial(word.Length)) / result;
+            }return Factorial(word.Length) / result;
 
         }
+        string GetDistinct(string word)
+        {
+            string distinctChar = string.Empty;
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (!distinctChar.Contains(word[i].ToString()))
+                    distinctChar += word[i];
+            }
+
+            return distinctChar;
+        
+    }
         int GetRepetition(char letterIntroduced, string word)
         {
             int countWord = 0;
-            string LowerCase = word.ToLower();
+           
             for (int i = 0; i < word.Length; i++)
             {
                 if (letterIntroduced == word[i])
@@ -69,6 +87,7 @@ namespace AnagramProblem
             for (int i = 1; i <= number; i++)
             {
                 result = result * i;
+                number--;
             }
 
             return result;
