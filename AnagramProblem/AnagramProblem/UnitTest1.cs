@@ -16,15 +16,11 @@ namespace AnagramProblem
         {
             Assert.AreEqual(1, CalculateAnagram("bbbb"));
         }
-        [TestMethod]
-        public void CalculateAnagramWithSameLettersUpper()
-        {
-            Assert.AreEqual(1, CalculateAnagram("AA"));
-        }
+
         [TestMethod]
         public void CalculateRepetitions()
         {
-            Assert.AreEqual(2, GetRepetition('a',"aab"));
+            Assert.AreEqual(2, GetRepetition('a', "aab"));
         }
         [TestMethod]
         public void CalculateRepetition()
@@ -32,48 +28,38 @@ namespace AnagramProblem
             Assert.AreEqual(4, GetRepetition('b', "abababab"));
         }
         [TestMethod]
+        public void CalculateAnagramFinal()
+        {
+            Assert.AreEqual(6, CalculateAnagram("aabbcd"));
+        }
+        [TestMethod]
         public void CalculateAComplicatedAngram()
         {
-            Assert.AreEqual(6, CalculateAnagram("abc"));
+            Assert.AreEqual(12, CalculateAnagram("abca"));
         }
         [TestMethod]
         public void CalculateAnagram()
         {
             Assert.AreEqual(24, CalculateAnagram("abcd"));
         }
-        [TestMethod]
-        public void FindDistinctChar()
-        {
-            Assert.AreEqual("abcdx", GetDistinct("abcdabcdaaccdbx"));
-        }
+        
         public int CalculateAnagram(string word)
         {
             int result = 1;
             int anagrams = 0;
-           for(int i='a'; i<='z'; i++)
+            for (int i = 'a'; i <= 'z'; i++)
             {
-                result =result* Factorial(GetRepetition((char)i, word)) ;
+                result = result * Factorial(GetRepetition((char)i, word));
             }
-            return anagrams= Factorial(word.Length) / result;
+            return result = Factorial(word.Length) / result;
 
         }
-        string GetDistinct(string word)
-        {
-            string distinctChar = string.Empty;
 
-            for (int i = 0; i < word.Length; i++)
-            {
-                if (!distinctChar.Contains(word[i].ToString()))
-                    distinctChar += word[i];
-            }
 
-            return distinctChar;
-        
-    }
         int GetRepetition(char letterIntroduced, string word)
         {
             int countWord = 0;
-           
+
             for (int i = 0; i < word.Length; i++)
             {
                 if (letterIntroduced == word[i])
@@ -88,12 +74,13 @@ namespace AnagramProblem
             for (int i = 1; i <= number; i++)
             {
                 result = result * i;
-                number--;
+
             }
 
             return result;
 
         }
 
-    } 
+    }
+
 }
