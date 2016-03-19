@@ -37,9 +37,11 @@ namespace Loto
 
         public double CalculateCombinationsOfNtakenByK(int n, int k)
         {
-            return Factorial(n) / (Factorial(k) * Factorial(n - k));
+            if (n>k)
 
+                return Factorial(n) / (Factorial(k) * Factorial(n - k));
 
+            return 0;
         }
 
     }
