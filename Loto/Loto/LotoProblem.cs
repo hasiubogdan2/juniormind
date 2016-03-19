@@ -11,7 +11,12 @@ namespace Loto
         {
             Assert.AreEqual(6, Factorial(3));
         }
+        [TestMethod]
+        public void CalculateCombinations()
+        {
+            Assert.AreEqual(6,CalculateCombinationsOfNtakenByK(4,2));
 
+        }
         public double CalculateLotoChances(int posibleCases,int favorableCases)
         {
             posibleCases = 49;
@@ -29,5 +34,13 @@ namespace Loto
             }
             return result;
         }
+
+        public double CalculateCombinationsOfNtakenByK(int n, int k)
+        {
+            return Factorial(n) / (Factorial(k) * Factorial(n - k));
+
+
+        }
+
     }
 }
