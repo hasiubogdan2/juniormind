@@ -14,15 +14,17 @@ namespace Loto
         [TestMethod]
         public void CalculateCombinations()
         {
-            Assert.AreEqual(6,CalculateCombinationsOfNtakenByK(4,2));
-
+            Assert.AreEqual(6,CalculateCombinations(4,2));
         }
-        public double CalculateLotoChances(int posibleCases,int favorableCases)
+        [TestMethod]
+        public void CalculateLotoCategory1()
         {
-            posibleCases = 49;
-            favorableCases = 6;
-
-            return 0;
+            Assert.AreEqual(0.0000000715, CalculateLotoChances(6,6,49));
+        }
+        public double CalculateLotoChances(int favorableCases, int posibleCases, int totalNumbers)
+        {
+            double chances = ((CalculateCombinations(posibleCases, favorableCases) * CalculateCombinations((totalNumbers - posibleCases), (posibleCases - favorableCases))) / CalculateCombinations(totalNumbers, posibleCases));
+            return chances;
         }
         public double Factorial(int number)
         {
@@ -35,7 +37,7 @@ namespace Loto
             return result;
         }
 
-        public double CalculateCombinationsOfNtakenByK(int n, int k)
+        public double CalculateCombinations(int n, int k)
         {
             if (n>k)
 
