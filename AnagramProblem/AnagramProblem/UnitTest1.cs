@@ -30,7 +30,7 @@ namespace AnagramProblem
         [TestMethod]
         public void CalculateAnagramFinal()
         {
-            Assert.AreEqual(6, CalculateAnagram("aabbcd"));
+            Assert.AreEqual(180, CalculateAnagram("aabbcd"));
         }
         [TestMethod]
         public void CalculateAComplicatedAngram()
@@ -43,10 +43,10 @@ namespace AnagramProblem
             Assert.AreEqual(24, CalculateAnagram("abcd"));
         }
         
-        public int CalculateAnagram(string word)
+        public double CalculateAnagram(string word)
         {
-            int result = 1;
-            int anagrams = 0;
+            double result = 1;
+            
             for (int i = 'a'; i <= 'z'; i++)
             {
                 result = result * Factorial(GetRepetition((char)i, word));
@@ -68,7 +68,7 @@ namespace AnagramProblem
             return countWord;
         }
 
-        int Factorial(int number)
+        double Factorial(int number)
         {
             int result = 1;
             for (int i = 1; i <= number; i++)

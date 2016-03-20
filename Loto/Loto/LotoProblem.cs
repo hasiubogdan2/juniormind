@@ -28,7 +28,7 @@ namespace Loto
         }
         public double Factorial(int number)
         {
-            int result = 1;
+            double result = 1;
             while (number != 0)
             {
                 result *= number;
