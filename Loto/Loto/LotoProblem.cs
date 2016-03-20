@@ -39,11 +39,11 @@ namespace Loto
 
         public double CalculateCombinations(int n, int k)
         {
-            if (n>k)
+           
 
                 return Factorial(n) / (Factorial(k) * Factorial(n - k));
 
-            return 0;
+           
         }
 
     }
