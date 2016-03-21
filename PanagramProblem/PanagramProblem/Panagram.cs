@@ -38,21 +38,18 @@ namespace PanagramProblem
 
         public bool CheckIfPanagram(string panagram)
         {
-
-            int i = 0;
-                for(int j=0; j<panagram.Length;j++) 
+            int j = 0;
+            for (int i = 0; i < panagram.Length; i++)
             {
-                while ((char)('a' + i++) == panagram[j]&&(i!=26))
+                while ((char)('a' + j) != panagram[i])
                 {
+                    j++;
                     return false;
                 }
+            }
+            return true;
 
-
-
-            } return true;
-
-
-}
+        }
 
     }
 }
