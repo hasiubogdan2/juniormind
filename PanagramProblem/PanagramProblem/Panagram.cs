@@ -28,6 +28,11 @@ namespace PanagramProblem
         {
             Assert.AreEqual(false, FindIfPanagram("We love coding"));
         }
+        [TestMethod]
+        public void CalculateIfPanagram3()
+        {
+            Assert.AreEqual(true, FindIfPanagram("zyxwvutsrqponmlkjihgfedcba"));
+        }
         public bool FindIfPanagram(string sentence)
         {
             string lowerCaseTransform = sentence.ToLower();
