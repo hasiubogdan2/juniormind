@@ -40,12 +40,20 @@ namespace PanagramProblem
                 return true;
             else return false;
         }
+        [TestMethod]
+        public void MyTestMethod()
+        {
+            Assert.IsFalse(FindIfPanagram(new string('a', 26)));
 
+        }
         public bool CheckIfPanagram(string panagram)
         {
-            int count = 0;
+            
             for (int j = 'a'; j < 'z';j++)
+
             {
+                int count = 0;
+
                 for (int i = 0; i < panagram.Length; i++)
                 {
                     if (panagram[i] == j) count++;
