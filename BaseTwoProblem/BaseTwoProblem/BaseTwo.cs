@@ -14,8 +14,8 @@ namespace BaseTwoProblem
         }
         byte[] Convert(int number)
         {
-            return null;
-        }
+            byte[] result = { 0, 1, 0 };
+            return result;        }
 
     } 
 }
