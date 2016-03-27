@@ -18,7 +18,7 @@ namespace BaseTwoProblem
         {
             int position = 0;
             int remainder = 0;
-            byte[] result = { };
+            byte[] result = {0,0,0 };
             while (number != 0)
             {
                 remainder = number % 2;
