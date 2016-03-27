@@ -10,7 +10,9 @@ namespace BaseTwoProblem
         public void TestMethod()
         {
             CollectionAssert.AreEqual(new byte[]{0,1,0},Convert(2));
-        
+            CollectionAssert.AreEqual(new byte[] { 1,0, 0 }, Convert(4));
+
+
         }
         byte[] Convert(int number)
         {
