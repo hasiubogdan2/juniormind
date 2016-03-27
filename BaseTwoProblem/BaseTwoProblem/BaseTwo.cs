@@ -36,10 +36,17 @@ namespace BaseTwoProblem
 
         }
 
-        byte[] CalculateAND(byte[] firstBytes,byte[] secondByte)
+        byte[] CalculateAND(byte[] firstBytes,byte[] secondBytes)
         {
-
-            return new byte[]{ 0,0,0};        
+            byte[] result = new byte[3];
+            for(int i=0; i < firstBytes.Length; i++)
+            {
+                if (firstBytes[i] == 1 && secondBytes[i] == 1)
+                    result[i] = 1;
+                else result[i] = 0;
+                    
+            }
+            return result;      
         }
 
 
