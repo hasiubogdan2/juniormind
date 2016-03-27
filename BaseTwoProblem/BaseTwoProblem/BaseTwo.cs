@@ -11,6 +11,8 @@ namespace BaseTwoProblem
         {
             CollectionAssert.AreEqual(new byte[] { 0, 1, 0 }, ConvertInBaseTwo(2));
             CollectionAssert.AreEqual(new byte[] { 1, 0, 0 }, ConvertInBaseTwo(4));
+            CollectionAssert.AreEqual(new byte[] { 1, 1, 1 }, ConvertInBaseTwo(7));
+
 
 
         }
