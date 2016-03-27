@@ -7,17 +7,28 @@ namespace BaseTwoProblem
     public class BaseTwo
     {
         [TestMethod]
-        public void TestMethod()
+        public void ConvertInBaseTwo()
         {
-            CollectionAssert.AreEqual(new byte[]{0,1,0},Convert(2));
-            CollectionAssert.AreEqual(new byte[] { 1,0, 0 }, Convert(4));
+            CollectionAssert.AreEqual(new byte[] { 0, 1, 0 }, ConvertInBaseTwo(2));
+            CollectionAssert.AreEqual(new byte[] { 1, 0, 0 }, ConvertInBaseTwo(4));
 
 
         }
-        byte[] Convert(int number)
+        byte[] ConvertInBaseTwo(int number)
         {
-            byte[] result = { 0, 1, 0 };
-            return result;        }
+            int position = 0;
+            int remainder = 0;
+            byte[] result = { };
+            while (number != 0)
+            {
+                remainder = number % 2;
+                number /= 2;
+                result[position] = (byte)remainder;
+                position++;
+            }
+            Array.Reverse(result);
+            return result;
 
-    } 
+        }
+    }
 }
