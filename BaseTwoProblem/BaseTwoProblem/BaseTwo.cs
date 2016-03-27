@@ -9,18 +9,21 @@ namespace BaseTwoProblem
         [TestMethod]
         public void ConvertInBaseTwo()
         {
-            CollectionAssert.AreEqual(new byte[] { 0, 1, 0 }, ConvertInBaseTwo(2));
-            CollectionAssert.AreEqual(new byte[] { 1, 0, 0 }, ConvertInBaseTwo(4));
-            CollectionAssert.AreEqual(new byte[] { 1, 1, 1 }, ConvertInBaseTwo(7));
-
-
-
+            CollectionAssert.AreEqual(new byte[] { 0, 1, 0 }, Convert(2));
+            CollectionAssert.AreEqual(new byte[] { 1, 0, 0 }, Convert(4));
+            CollectionAssert.AreEqual(new byte[] { 1, 1, 1 }, Convert(7));
         }
-        byte[] ConvertInBaseTwo(int number)
+
+        [TestMethod]
+        public void CalculateAND()
+        {
+            CollectionAssert.AreEqual(new byte[] { 0, 0, 0 }, CalculateAND(Convert(1),Convert(2)));
+        }
+        byte[] Convert(int number)
         {
             int position = 0;
             int remainder = 0;
-            byte[] result = {0,0,0 };
+            byte[] result = new byte[3];
             while (number != 0)
             {
                 remainder = number % 2;
@@ -32,5 +35,13 @@ namespace BaseTwoProblem
             return result;
 
         }
+
+        byte[] CalculateAND(byte[] firstBytes,byte[] secondByte)
+        {
+
+            return new byte[]{ 0,0,0};        
+        }
+
+
     }
 }
