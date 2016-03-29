@@ -26,6 +26,8 @@ namespace BaseTwoProblem
         {
             Assert.AreEqual(0, GetAt(0,new byte[] { 3, 2, 0 }));
             Assert.AreEqual(4, GetAt(2, new byte[] { 5, 2, 4, 10, 8 }));
+            Assert.AreEqual(7, GetAt(0, new byte[] { 1, 2, 3, 4, 5, 6, 5, 7 }));
+            Assert.AreEqual(0, GetAt(10, new byte[] { 2, 3, 4 }));
         }
         byte[] Convert(int number)
         {
