@@ -17,18 +17,18 @@ namespace BaseTwoProblem
         [TestMethod]
         public void CalculateAND()
         {
-            CollectionAssert.AreEqual(Convert(1 & 2), CalculateAND(Convert(1),Convert(2)));
+            CollectionAssert.AreEqual(Convert(1 & 2), CalculateAND(Convert(1), Convert(2)));
             CollectionAssert.AreEqual(Convert(7 & 2), CalculateAND(Convert(7), Convert(2)));
         }
 
         [TestMethod]
         public void GetAtTEst()
         {
-            CollectionAssert.AreEqual(new byte[] { 1 }, GetAt(2,new byte[3]));
+            Assert.AreEqual(new byte[] { 0 }, GetAt(2,new byte[] { 3, 2, 0 }));
         }
         byte[] Convert(int number)
         {
-           
+
             int remainder = 0;
             byte[] result = new byte[0];
             while (number != 0)
@@ -36,33 +36,33 @@ namespace BaseTwoProblem
                 remainder = number % 2;
                 number /= 2;
                 Array.Resize(ref result, result.Length + 1);
-                result[result.Length-1] = (byte)remainder;
-                
+                result[result.Length - 1] = (byte)remainder;
+
             }
             Array.Reverse(result);
             return result;
 
         }
 
-        byte[] CalculateAND(byte[] firstBytes,byte[] secondBytes)
+        byte[] CalculateAND(byte[] firstBytes, byte[] secondBytes)
         {
             byte[] result = new byte[firstBytes.Length];
-            for(int i=0; i < firstBytes.Length; i++)
+            for (int i = 0; i < firstBytes.Length; i++)
             {
                 if (firstBytes[i] == 1 && secondBytes[i] == 1)
                     result[i] = 1;
                 else result[i] = 0;
-                
+
 
             }
-            return result;      
+            return result;
         }
-       
-        byte[] GetAt(byte position,byte[] length)
+
+        byte GetAt(int position, byte[] length)
         {
-            length = new byte[] { 1, 2, 3 };
-            return new byte[length.Length - 1 - position];
-            }
+            if (position > length.Length - 1)
+                return 0;
+            return length[length.Length - 1 - position];
         }
     }
-
+}
