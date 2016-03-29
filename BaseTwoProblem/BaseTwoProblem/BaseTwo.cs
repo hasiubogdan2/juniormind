@@ -24,7 +24,8 @@ namespace BaseTwoProblem
         [TestMethod]
         public void GetAtTEst()
         {
-            Assert.AreEqual(new byte[] { 0 }, GetAt(2,new byte[] { 3, 2, 0 }));
+            Assert.AreEqual(0, GetAt(0,new byte[] { 3, 2, 0 }));
+            Assert.AreEqual(4, GetAt(2, new byte[] { 5, 2, 4, 10, 8 }));
         }
         byte[] Convert(int number)
         {
@@ -60,7 +61,7 @@ namespace BaseTwoProblem
 
         byte GetAt(int position, byte[] length)
         {
-            if (position > length.Length - 1)
+            if (position >= length.Length)
                 return 0;
             return length[length.Length - 1 - position];
         }
