@@ -87,10 +87,11 @@ namespace BaseTwoProblem
         {
             
             for (int i = 0; i < ArrayOfBytes.Length; i++)
-            {   if (ArrayOfBytes[i] == 0) return ArrayOfBytes[i] += 1;
+            {   if (ArrayOfBytes[i] == 0)  ArrayOfBytes[i] += 1;
+            else ArrayOfBytes[i]==1 return ArrayOfBytes[i] -= 1;
                 
             }
-            return result;
+            
 
         }
 
