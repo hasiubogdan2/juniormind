@@ -50,22 +50,25 @@ namespace BaseTwoProblem
         byte[] CalculateAND(byte[] firstBytes, byte[] secondBytes)
         {
             byte[] result = new byte[firstBytes.Length];
+            
             for (int i = 0; i < firstBytes.Length; i++)
             {
-                if (firstBytes[i] == 1 && secondBytes[i] == 1)
+                
+                if (GetAt(i, firstBytes) == 1 && GetAt(i, secondBytes) == 1)
+
                     result[i] = 1;
                 else result[i] = 0;
-
-
+                
+                
             }
             return result;
         }
 
-        byte GetAt(int position, byte[] length)
+        byte GetAt(int position, byte[] array)
         {
-            if (position >= length.Length)
+            if (position >= array.Length)
                 return 0;
-            return length[length.Length - 1 - position];
+            return array[array.Length - 1 - position];
         }
     }
 }
