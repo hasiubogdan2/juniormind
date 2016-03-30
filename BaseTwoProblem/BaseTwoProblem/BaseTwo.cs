@@ -46,7 +46,7 @@ namespace BaseTwoProblem
         [TestMethod]
         public void CalculateXOR()
         {
-            CollectionAssert.AreEqual(new byte[] { 1, 1, 0 }, CalculateXOR(new byte[] { 1, 1, 1 }, new byte[] { 1 }));
+            CollectionAssert.AreEqual(new byte[] { 0, 0, 0 }, CalculateXOR(new byte[] { 1, 1, 1 }, new byte[] { 1,1,1 }));
         }
         byte[] Convert(int number)
         {
@@ -108,7 +108,15 @@ namespace BaseTwoProblem
         byte[] CalculateXOR(byte[] firstBytes, byte[] secondBytes) {
 
 
-            return new byte[] { 1, 1, 0 };
+            byte[] result = new byte[firstBytes.Length];
+            for (int i = 0; i < firstBytes.Length; i++)
+            {
+                if (GetAt(i, firstBytes) ==  GetAt(i, secondBytes) )
+
+                    result[i] = 0;
+                else result[i] = 1;
+            }
+            return result;
         }
         byte GetAt(int position, byte[] array)
         {
