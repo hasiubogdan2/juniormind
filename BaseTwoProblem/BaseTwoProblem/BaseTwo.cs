@@ -17,8 +17,9 @@ namespace BaseTwoProblem
         [TestMethod]
         public void CalculateAND()
         {
-            CollectionAssert.AreEqual(Convert(1 & 2), CalculateAND(Convert(1), Convert(2)));
-            CollectionAssert.AreEqual(Convert(7 & 2), CalculateAND(Convert(7), Convert(2)));
+            CollectionAssert.AreEqual(new byte[] { 0 }, CalculateAND(Convert(1), Convert(2)));
+            CollectionAssert.AreEqual(new byte[] { 0, 1, 0 }, CalculateAND(Convert(7), Convert(2)));
+
         }
 
         [TestMethod]
