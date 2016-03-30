@@ -72,7 +72,7 @@ namespace BaseTwoProblem
         }
         byte[] CalculateOR(byte[] firstBytes,byte[] secondBytes)
         {
-            return null;
+            return new byte[] { 1, 1 };
         }
 
         byte GetAt(int position, byte[] array)
