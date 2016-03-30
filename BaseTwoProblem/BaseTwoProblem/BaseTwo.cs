@@ -37,6 +37,12 @@ namespace BaseTwoProblem
             CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(new byte[] { 0, 1 }, new byte[] { 1, 0 }));
            // CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(Convert(1), Convert(2)));
         }
+
+        [TestMethod]
+        public void CalculateNOT()
+        {
+            CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 0, 0, 1 }, CalculateNOT(new byte[] { 0, 0, 0, 1, 1, 0 }));
+        }
         byte[] Convert(int number)
         {
 
@@ -88,10 +94,10 @@ namespace BaseTwoProblem
             
             for (int i = 0; i < ArrayOfBytes.Length; i++)
             {   if (ArrayOfBytes[i] == 0)  ArrayOfBytes[i] += 1;
-            else ArrayOfBytes[i]==1 return ArrayOfBytes[i] -= 1;
+            else if(ArrayOfBytes[i]==1)  ArrayOfBytes[i] -= 1;
                 
             }
-            
+            return ArrayOfBytes;
 
         }
 
