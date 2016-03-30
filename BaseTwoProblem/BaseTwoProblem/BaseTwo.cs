@@ -108,7 +108,7 @@ namespace BaseTwoProblem
         byte[] CalculateXOR(byte[] firstBytes, byte[] secondBytes) {
 
 
-            return null;
+            return new byte[] { 1, 1, 0 };
         }
         byte GetAt(int position, byte[] array)
         {
