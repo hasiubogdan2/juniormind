@@ -34,7 +34,8 @@ namespace BaseTwoProblem
         [TestMethod]
         public void CalculateOR()
         {
-            CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(Convert(1), Convert(2)));
+            CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(new byte[] { 0, 1 }, new byte[] { 1, 0 }));
+           // CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(Convert(1), Convert(2)));
         }
         byte[] Convert(int number)
         {
@@ -72,7 +73,15 @@ namespace BaseTwoProblem
         }
         byte[] CalculateOR(byte[] firstBytes,byte[] secondBytes)
         {
-            return new byte[] { 1, 1 };
+            byte[] result = new byte[firstBytes.Length];
+            for(int i = 0; i < firstBytes.Length; i++)
+            {
+                if (GetAt(i, firstBytes) == 0 && GetAt(i, secondBytes) == 0)
+
+                    result[i] = 0;
+                else result[i] = 1;
+            }
+            return result;
         }
 
         byte GetAt(int position, byte[] array)
