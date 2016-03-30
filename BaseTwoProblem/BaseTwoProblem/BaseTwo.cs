@@ -83,6 +83,16 @@ namespace BaseTwoProblem
             }
             return result;
         }
+        byte[] CalculateNOT(byte[] ArrayOfBytes)
+        {
+            
+            for (int i = 0; i < ArrayOfBytes.Length; i++)
+            {   if (ArrayOfBytes[i] == 0) return ArrayOfBytes[i] += 1;
+                
+            }
+            return result;
+
+        }
 
         byte GetAt(int position, byte[] array)
         {
