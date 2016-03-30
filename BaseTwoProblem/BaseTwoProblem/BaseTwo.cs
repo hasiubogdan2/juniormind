@@ -30,6 +30,12 @@ namespace BaseTwoProblem
             Assert.AreEqual(7, GetAt(0, new byte[] { 1, 2, 3, 4, 5, 6, 5, 7 }));
             Assert.AreEqual(0, GetAt(10, new byte[] { 2, 3, 4 }));
         }
+
+        [TestMethod]
+        public void CalculateOR()
+        {
+            CollectionAssert.AreEqual(new byte[] { 1, 1 }, CalculateOR(Convert(1), Convert(2)));
+        }
         byte[] Convert(int number)
         {
 
@@ -63,6 +69,10 @@ namespace BaseTwoProblem
                 
             }
             return result;
+        }
+        byte[] CalculateOR(byte[] firstBytes,byte[] secondBytes)
+        {
+            return null;
         }
 
         byte GetAt(int position, byte[] array)
